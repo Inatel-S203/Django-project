@@ -46,6 +46,8 @@ No shell do Django, importe o modelo Filme do seu aplicativo. Substitua catalogo
 
 Crie uma nova instância do modelo Filme, preenchendo os campos necessários. Por exemplo, para adicionar o novo filme:
 
+``from catalogo.models import Filme`` -> Para importar  novamente o modelo
+
 ``novo_filme = Filme(
     titulo="nome_filme", 
     ano_de_lancamento=ano_filme,
