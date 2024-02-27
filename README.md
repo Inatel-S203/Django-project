@@ -59,7 +59,7 @@ Salve a nova instância no banco de dados usando o método .save():
 ``novo_filme.save()``
 
 
-Após executar esses comandos, o filme "O Exorcista" será adicionado ao banco de dados do seu projeto Django.
+Após executar esses comandos, o novo filme será adicionado ao banco de dados do seu projeto Django.
 
 
 ### Passo 4: Encerrando o Shell  

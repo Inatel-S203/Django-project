@@ -5,7 +5,7 @@ class Filme(models.Model):
     ano_de_lancamento = models.IntegerField()
     diretor = models.CharField(max_length=255)
     genero = models.CharField(max_length=100)
-    duracao = models.IntegerField()  # Duração em minutos
+    duracao = models.IntegerField() 
 
     def __str__(self):
         return self.titulo
