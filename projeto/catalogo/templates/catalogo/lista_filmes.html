@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Filmes</title>
+</head>
+<body>
+    <h1>Lista de Filmes</h1>
+    <div>
+        <form action="" method="get">
+            <div>
+                <label for="ano">Ano:</label>
+                <input type="text" id="ano" name="ano" value="{{ request.GET.ano }}">
+            </div>
+            <div>
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" value="{{ request.GET.genero }}">
+            </div>
+            <div>
+                <label for="diretor">Diretor:</label>
+                <input type="text" id="diretor" name="diretor" value="{{ request.GET.diretor }}">
+            </div>
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Ano de Lançamento</th>
+                <th>Diretor</th>
+                <th>Gênero</th>
+                <th>Duração (min)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for filme in filmes %}
+            <tr>
+                <td>{{ filme.titulo }}</td>
+                <td>{{ filme.ano_de_lancamento }}</td>
+                <td>{{ filme.diretor }}</td>
+                <td>{{ filme.genero }}</td>
+                <td>{{ filme.duracao }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">Nenhum filme encontrado.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
