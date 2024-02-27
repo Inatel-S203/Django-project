@@ -44,7 +44,7 @@ No shell do Django, importe o modelo Filme do seu aplicativo. Substitua catalogo
 
 ### Passo 3: Criando e Salvando um Novo Filme  
 
-Crie uma nova instância do modelo Filme, preenchendo os campos necessários. Por exemplo, para adicionar o filme "O Exorcista":
+Crie uma nova instância do modelo Filme, preenchendo os campos necessários. Por exemplo, para adicionar o novo filme:
 
 ``novo_filme = Filme(
     titulo="nome_filme", 
